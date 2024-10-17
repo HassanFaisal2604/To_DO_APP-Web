@@ -1,7 +1,7 @@
 import streamlit as st
 import functions 
 todos=functions.read_tasks()
-
+st.set_page_config(page_title="To-Do App",page_icon="📝",layout='wide')
 st.title("Welcome to the To-Do App!")
 st.subheader("Add tasks") 
 def add_todo():
