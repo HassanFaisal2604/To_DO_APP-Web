@@ -1,7 +1,7 @@
 import streamlit as st
 import functions 
 todos=functions.read_tasks()
-print(todos)
+
 st.title("Welcome to the To-Do App!")
 st.subheader("Add tasks") 
 def add_todo():
@@ -17,3 +17,8 @@ for index,todo in enumerate(todos):
         st.experimental_fragment()
         
 input_user=st.text_input(label="",placeholder="add new todo",on_change=add_todo,key='new_todo')
+st.subheader("Previous task")
+old_todos=functions.read_completed_tasks()
+for index,values in enumerate (old_todos):
+    st.write("This is the last Completed Task:")
+    st.write(values) 
