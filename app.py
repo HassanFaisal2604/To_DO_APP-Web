@@ -20,5 +20,4 @@ input_user=st.text_input(label="",placeholder="add new todo",on_change=add_todo,
 st.subheader("Previous task")
 old_todos=functions.read_completed_tasks()
 for index,values in enumerate (old_todos):
-    st.write("This is the last Completed Task:")
     st.write(values) 
